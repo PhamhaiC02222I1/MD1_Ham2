@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add New Product</h1> <br>
+<input type="text" id="proName">
+<button onclick="add()">Add
+</button>
+<br>
+<h2>Display All Product</h2>
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th style="text-align: left;">Product Name</th>-->
+<!--        <th style="text-align: right; color:brown"  >-->
+<!--            <p id="counter"></p>-->
+<!--        </th>-->
+<!--    </tr>-->
+<!--    <tbody id="products">-->
+<!--    </tbody>-->
+<!--</table>-->
+<!--<h3>Product Name</h3>-->
+<table id="List">
+
+</table>
+
+<script>
+    let arr =["Sony Xperia","Sam Sung","Nokia 6","Xiaomi Redmi Note4","Apple iPhone 6S","Xiaomi 5S","Apple iPhone 8 Plus","Fujitsu F-04E","Oppo A71"]
+    function display(){
+        let data = '';
+
+        for ( let i=0;i<arr.length;i++){
+            data+= "<tr>" +"<th style='text-align: left'>"+"Product Name"+"</th>"+"<th style='text-align: right;color: red'>"+ arr.length +"Product" +"</th>"+"</tr>";
+                data += '<td>' + arr[i] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +  '</td>';
+                data += '<td><button  onclick="doi(this)">Edit</button> </td>';
+                data += '<td><button onclick="xoa(this)">Delete</button></td>';
+            }
+        document.getElementById("List").innerHTML = data ;
+        }
+
+
+
+    function add(){
+        let productName = document.getElementById("proName").value;
+        arr.push(productName);
+        display()
+    }
+    function doi(cell){
+
+    }
+    function xoa(cell){
+        let a= cell.value
+        arr.slice(a,1)
+
+        // arr.slice(item,1)
+        display()
+    }
+
+    display()
+</script>
+
+
+</body>
+</html>

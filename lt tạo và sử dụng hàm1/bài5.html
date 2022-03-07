@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<input type="text" id="hienthi" onchange="nhap()"> <br>-->
+<!--<button id="btm" onclick="nhap()">Hiện chòm sao</button>-->
+<!--<br>-->
+<p id="rs"></p>
+<script>
+    let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"]
+    let star1 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    let result=document.getElementById("rs");
+    // function nhap(){
+    //     let giatri = document.getElementById('hienthi').value;
+    //     for ( let i=0;i<star.length;i++){
+    //         if (giatri==star[i]){
+    //             result.innerHTML = star1[i]
+    //             break
+    //         }else result.innerHTML = "không tìm thấy ngôi sao nào"
+    //     }
+    // }
+
+
+    function kiemtra() {
+
+        for (let i = 0; i < star.length; i++) {
+            if (nhapvao == star[i]) {
+                result.innerHTML = star1[i]
+                break
+                 }else result.innerHTML = "không tìm thấy ngôi sao nào"
+            }
+
+
+
+    }
+    let nhapvao = prompt("Nhập tên ngôi sao")
+    kiemtra(nhapvao)
+   // let c=kiemtra(nhapvao)
+</script>
+</body>
+</html>

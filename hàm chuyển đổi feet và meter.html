@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function footToMeet(foot) {
+        let meet = 0.305 * foot;
+        return meet;
+    }
+
+    function meterToFoot(meter) {
+        let foot = 3.279 * meter;
+        return foot;
+    }
+
+    let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let arr2 = [20, 25, 30, 35, 40, 45, 50, 55, 60];
+
+    for (let i = 0; i < arr1.length; i++) {
+
+        let a = footToMeet(arr1[i]);
+        document.write(a+ " ")
+
+    }
+    document.write("<br>")
+    for (let j = 0; j < arr2.length; j++) {
+
+        let b = meterToFoot(arr2[j]);
+        document.write(b+ " ")
+
+    }
+
+
+    // for (let i=0;i<arr2.length;i++){
+    //     let b=footToMeet(arr1[i]);
+    //     document.write(a +"  ");
+
+    // let foot1=footToMeet(2);
+    // console.log(foot1)
+    // let meter1=meterToFoot(arr2);
+    //
+    // document.write(foot1.join())
+</script>
+</body>
+</html>

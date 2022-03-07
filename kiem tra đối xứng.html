@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="rs"></p>
+<script>
+    let a = prompt("Nhập vào 1 chuỗi kí tự")
+    let arr = a.split("")
+    let check = 0
+    let result = document.getElementById("rs")
+    let cuoi = arr.length - 1
+    function checkPa() {
+        let flat = 0
+        for (let dau = 0; dau < cuoi; dau++) {
+            if (arr[dau] !== arr[cuoi]) {
+                flat = 0
+                break
+            } else (arr[dau] === arr[cuoi])
+            {
+                cuoi--
+                flat = 1
+            }
+        }
+        return flat
+    }
+
+
+
+    check = checkPa(arr)
+    console.log(check)
+    if (check == 0) {
+        result.innerHTML = "không chuỗi palindrome"
+    } else result.innerHTML = "là chuỗi palindrome"
+
+
+</script>
+</body>
+</html>
